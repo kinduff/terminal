@@ -1,0 +1,26 @@
+body {
+  font-family: 'monospace';
+  background: black;
+  color: white;
+}
+p, span {
+  margin-top: 1px;
+}
+.info p, .terminal {
+  display: none;
+}
+.comando:before {
+  content: '$ ';
+}
+input {
+  border: none;
+  outline: none;
+  width: 0;
+  border: 1px solid black;
+}
+.blink {
+  width: 5px;
+  height: 13px;
+  display: inline-block;
+  background-color: white;
+}​
