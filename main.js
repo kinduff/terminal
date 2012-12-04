@@ -1,12 +1,13 @@
 $(document).ready(function() {
   function focus() { $('#user').focus(); }
   // Efecto loading
-  $('.info p:hidden').each(function(index) {
+  /** $('.info p:hidden').each(function(index) {
       setTimeout(function(el) {
           el.show();
           if ($('.info p:hidden').length == 0 ) { $('.terminal').show(); focus(); }
       }, index * 500, $(this));
-  });
+  }); **/
+  $('.terminal').show(); focus();
   // Focus, focus everywhere.
   $(window).focus(function() {
     focus();
@@ -16,15 +17,14 @@ $(document).ready(function() {
     focus();
     $('#user').val($('#user').val());
   });
-  // Clonemos el texto del input para agregar cursor
-  $('#user').keyup(function () {
-    var value = $(this).val();
-    $('.clone').text(value);
-  }).keyup();
+  $('#user').on('input',function(e){
+    $('.clone').text($(this).val());
+  });
   // Si es usuario presiona alguna tecla
-  $('#user').bind('keypress', function(e) {
+  $('#user').keypress(function(e) {
     // Si es usuario presiona enter
-    if(e.keyCode==13){
+    if(e.keyCode===13){
+      e.preventDefault();
       var valor = $(this).val(); // Rescatamos valor
       $(this).val(''); // Hacemos clear al input
       $('.clone').text(''); // Hacemos clear al clon
