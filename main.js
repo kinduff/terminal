@@ -1,12 +1,6 @@
 $(document).ready(function() {
   function focus() { $('#user').focus(); }
-  // Efecto loading
-  $('.info p:hidden').each(function(index) {
-      setTimeout(function(el) {
-          el.show();
-          if ($('.info p:hidden').length == 0 ) { $('.terminal').show(); focus(); }
-      }, index * 500, $(this));
-  });
+  $('.terminal').show(); focus();
   // Focus, focus everywhere.
   $(window).focus(function() {
     focus();
@@ -56,4 +50,7 @@ $(document).ready(function() {
       }
     }, 500);
   });
+  var theHandle = document.getElementById("handle");
+  var theRoot = document.getElementById("terminal");
+  Drag.init(theHandle, theRoot);
 });
