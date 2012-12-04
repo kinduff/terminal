@@ -8,6 +8,7 @@ p, span {
 }
 .info p, .terminal {
   display: none;
+  word-wrap: break-word;
 }
 .comando:before {
   content: '$ ';
