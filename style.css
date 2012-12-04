@@ -2,6 +2,7 @@ body {
   font-family: 'monospace';
   background: white;
   color: white;
+  overflow: hidden;
 }
 #terminal {
   position: absolute;
