@@ -50,6 +50,11 @@ $(document).ready(function() {
       }
     }, 500);
   });
+  $("#handle").live("mousedown", function () {
+    $(this).css('cursor','move');
+  }).live("mouseup", function () {
+    $(this).css('cursor','default');
+  });
   var theHandle = document.getElementById("handle");
   var theRoot = document.getElementById("terminal");
   Drag.init(theHandle, theRoot);
