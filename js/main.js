@@ -1,5 +1,6 @@
 $(document).ready(function() {
   function focus() { $('#user').focus(); }
+  function scroll() { $(".terminal").scrollTop(99999); }
   $('.terminal').show(); focus();
   // Focus, focus everywhere.
   $(window).focus(function() {
@@ -15,6 +16,7 @@ $(document).ready(function() {
   });
   // Si es usuario presiona alguna tecla
   $('#user').keypress(function(e) {
+    scroll();
     // Si es usuario presiona enter
     if(e.keyCode===13){
       e.preventDefault();
@@ -25,8 +27,10 @@ $(document).ready(function() {
       caso = cases.indexOf(valor); // views.js -> tomamos valor del array
       if (caso === -1) { // Si no existe el comando regresa -1
         $('#respuesta').append('<p class="respuesta">Comando "'+valor+'" no identificado.<br />Para ver lista de comandos, escribe: help</p>');
+        scroll();
       } else { 
         terminal(caso); // Si existe regresa 1..oo, ejecutamos función terminal
+        scroll();
       }
     }
   });
