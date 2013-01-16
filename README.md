@@ -20,4 +20,4 @@ Este obra está bajo una [Licencia Creative Commons Atribución-NoComercial-Comp
 
 [1]: http://twitter.com/kinduff
 [2]: http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es
-[3]: http://abarcarodriguez.com/terminal-js-jugando-con-javascript
+[3]: http://abarcarodriguez.com/blog/terminal-js-jugando-con-javascript
