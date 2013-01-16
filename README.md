@@ -5,6 +5,9 @@ Se trata de un experimento en Javascript y jQuery escrito por [@kinduff][1], sur
 
 Aún está en etapa beta, muy joven. La intención es realizar un plugin expandible con funciones completas.
 
+## Demo
+Puedes ver un demo en el artículo dedicado en mi blog: [ir al artículo][3]
+
 ## Soporte
 Al ser la primera versión, no se asegura compatibilidad crossbrowser con navegadores desactualizados o IE. Pull requests e Issues son bienvenidos, pero recuerda que aún es un plugin en desarrollo.
 
@@ -17,3 +20,4 @@ Este obra está bajo una [Licencia Creative Commons Atribución-NoComercial-Comp
 
 [1]: http://twitter.com/kinduff
 [2]: http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es
+[3]: http://abarcarodriguez.com/terminal-js-jugando-con-javascript
