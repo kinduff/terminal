@@ -49,6 +49,10 @@ body {
 p, span {
   margin-top: 1px;
 }
+.terminal {
+  padding-left: 5px;
+  padding-top: 2px;
+}
 .info p, .terminal {
   display: none;
   word-wrap: break-word;
