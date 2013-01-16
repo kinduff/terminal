@@ -3,7 +3,7 @@ body {
   background: white;
   color: white;
   overflow: hidden;
-	background: url('bg_desktop.jpg') no-repeat center center fixed; 
+	background: url('../img/bg_desktop.jpg') no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -15,7 +15,7 @@ body {
   height: 400px;
   margin-top: 50px;
   margin-left: 250px;
-  background-image: url('bg_trans.png');
+  background-image: url('../img/bg_trans.png');
   -webkit-border-radius: 11px;
   -moz-border-radius: 11px;
   border-radius: 11px;
