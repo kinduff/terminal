@@ -1,6 +1,5 @@
 $(document).ready(function() {
   function focus() { $('#user').focus(); }
-  function scroll() { $(".terminal").scrollTop(99999); }
   $('.terminal').show(); focus();
   // Focus, focus everywhere.
   $(window).focus(function() {
@@ -16,7 +15,6 @@ $(document).ready(function() {
   });
   // Si es usuario presiona alguna tecla
   $('#user').keypress(function(e) {
-    scroll();
     // Si es usuario presiona enter
     if(e.keyCode===13){
       e.preventDefault();
@@ -27,10 +25,8 @@ $(document).ready(function() {
       caso = cases.indexOf(valor); // views.js -> tomamos valor del array
       if (caso === -1) { // Si no existe el comando regresa -1
         $('#respuesta').append('<p class="respuesta">Comando "'+valor+'" no identificado.<br />Para ver lista de comandos, escribe: help</p>');
-        scroll();
       } else { 
         terminal(caso); // Si existe regresa 1..oo, ejecutamos función terminal
-        scroll();
       }
     }
   });
@@ -44,6 +40,7 @@ $(document).ready(function() {
     }
   }
   // Función para hacer blink al cursor
+  // http://stackoverflow.com/questions/12903594/set-css-with-jquery-after-ajax
   $('.blink').each(function() {
     var elem = $(this);
     setInterval(function() {
@@ -54,11 +51,15 @@ $(document).ready(function() {
       }
     }, 500);
   });
-  $("#handle").live("mousedown", function () {
-    $(this).css('cursor','move');
-  }).live("mouseup", function () {
-    $(this).css('cursor','default');
+  // Para tomar la barra superior, simulamos drag en mouse
+  $("#handle").live("mousedown", function () { // Click!
+    $(this).css('cursor','move'); // Drag
+  }).live("mouseup", function () { // Click-off...
+    $(this).css('cursor','default'); // Default
   });
+  // Handler con dom-drag.js
+  // DYNAMIC DRIVE FUCK YEAH!
+  // http://www.dynamicdrive.com/dynamicindex11/domdrag/
   var theHandle = document.getElementById("handle");
   var theRoot = document.getElementById("terminal");
   Drag.init(theHandle, theRoot);
